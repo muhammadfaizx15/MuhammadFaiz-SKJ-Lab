@@ -1,0 +1,13 @@
+all: x_number
+
+add_numbers: x_number.cpp
+    g++ -o x_number x_number.cpp
+
+dump: x_number
+    objdump -d x_number > add_number.asm 
+
+clean: 
+    rm -f x_number x_number.asm
+
+run: x_number
+    ./x_number
